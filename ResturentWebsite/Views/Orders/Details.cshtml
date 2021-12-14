@@ -1,0 +1,48 @@
+﻿@model ResturentWebsite.Models.Orders
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Orders</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Starters)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Starters)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.MainCourse)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.MainCourse)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Drinks)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Drinks)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Sides)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Sides)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Desert)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Desert)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.OrderID">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>

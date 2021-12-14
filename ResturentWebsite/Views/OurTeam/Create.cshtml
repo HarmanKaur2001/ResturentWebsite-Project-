@@ -1,0 +1,53 @@
+﻿@model ResturentWebsite.Models.OurTeam
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>OurTeam</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="MasterChef" class="control-label"></label>
+                <input asp-for="MasterChef" class="form-control" />
+                <span asp-validation-for="MasterChef" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="SousChef" class="control-label"></label>
+                <input asp-for="SousChef" class="form-control" />
+                <span asp-validation-for="SousChef" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="CrewMembers" class="control-label"></label>
+                <input asp-for="CrewMembers" class="form-control" />
+                <span asp-validation-for="CrewMembers" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Bartender" class="control-label"></label>
+                <input asp-for="Bartender" class="form-control" />
+                <span asp-validation-for="Bartender" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Cashier" class="control-label"></label>
+                <input asp-for="Cashier" class="form-control" />
+                <span asp-validation-for="Cashier" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
